@@ -45,7 +45,6 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.authService
         .loginUsuario(email, password)
         .then((usuario) => {
-          console.log('usuario', usuario);
           this.store.dispatch(ui.stopLoading());
           this.router.navigate(['/']);
         })
